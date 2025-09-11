@@ -7,6 +7,6 @@ function concatenar($cadena1 = " Valor por defecto 1 ", $cadena2 = "Valor por de
  return $cadena1 . " " . $cadena2;
 }
 
-echo "<p> La concatenación de '" . $cadena1 . "' y '" . $cadena2 . "' es: " . concatenar($cadena1) . "</p>";
+include '10-funcionConcat+Defecto_view.php'
 
 ?>
