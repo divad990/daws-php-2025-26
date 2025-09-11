@@ -1,7 +1,7 @@
 <?php
 
-$cadena1 = $_GET['cadena1'];
-$cadena2 = $_GET['cadena2'];
+$cadena1 = $_GET['cadena1'] ?? "Primer texto";
+$cadena2 = $_GET['cadena2'] ?? "Segundo texto";
 
 echo "<p> La concatenación de '" . $cadena1 . "' y '" . $cadena2 . "' es: " . concatenar($cadena1) . "</p>";
 
