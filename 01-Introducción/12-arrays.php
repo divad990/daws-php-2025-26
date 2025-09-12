@@ -5,8 +5,6 @@
     $posicion = $_GET['pos'];
     $new = $_GET['new'];
 
-    include '12-arrays_view.php';
-
     function getValor($array, $posicion){
         return $array[$posicion];
     }
@@ -14,5 +12,7 @@
         $array[$posicion] = $valor;
         return var_export($array);
     }
+
+    include '12-arrays_view.php';
 
 ?>
