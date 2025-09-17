@@ -8,3 +8,5 @@ for ($x = 0; $x < $num; $x++){
 }
 
 echo "El resultado es: ".$resultado;
+
+?>
