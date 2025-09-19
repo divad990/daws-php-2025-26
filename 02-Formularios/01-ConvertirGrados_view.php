@@ -10,7 +10,7 @@
         <?php if (isset($_GET["temperatura"])):?>
             <?=
             "<b>
-                Resultado de la conversión ({$temperatura} {$unidad}): {$conversion}
+                Resultado de la conversión ({$temperatura} {$unidad}): " .calcularGrados($unidad,$temperatura)."
             </b>"
             ?>
         <?php endif ?>
