@@ -27,6 +27,7 @@
                     echo "La contraseña es incorrecta";
                 } else if (comprobarDatos($user,$passwd,$usuarios)=='true'){
                     echo "Correcto";
+                    require "./04-Login_view_2.php";
                 }
             }
         ?>

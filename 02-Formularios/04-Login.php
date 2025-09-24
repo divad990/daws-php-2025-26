@@ -37,6 +37,7 @@ if (empty($_POST['user']) && empty($_POST['passwd'])) {
         if (array_key_exists($user, $usuarios)){
             if ($usuarios[$user]["password"]==$passwd){
                 return 'true';
+                require "./04-Login_view_2.php";
             } else {
                 return "passwd";
             }
