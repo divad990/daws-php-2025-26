@@ -1,18 +1,18 @@
 <?php
 
     session_start();
-
-// Login de usuario y contraseña
-// BD array asociativo
-// Si loguea correctamente inicia una sesion y muestra mensaje
-// Al cerrar sesión cierra
+    $loginS = 0;
 
     if (!isset($_SESSION['log'])) {
 
         $estado = comprobarLogin();
         if ($estado == 4) {
             $loginS = comprobarDatos($_POST['user'],$_POST['passwd']);
+            echo $loginS;
+        }
 
+        if (isset($_POST['eliminar'])){
+            session_unset();
         }
         
         require "./05-login.php";
@@ -37,6 +37,16 @@
         "Aitor" => "Jm12345",
         "Lorea" => "Jm12345",
         ];
+
+        if (array_key_exists($user, $usuarios)){
+            if ($usuarios[$user] === $passwd){
+                return 1;
+            } else {
+                return 2;
+            }
+        } else {
+            return 3;
+        }
         
     }
 ?>
