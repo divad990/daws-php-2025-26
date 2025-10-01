@@ -13,12 +13,10 @@ $productos = consultar($dbh);
 
 if(isset($_POST['anadir']) && $nombreProducto) {
     insertarproducto($dbh, $nombreProducto);
-    // Refrescar la lista después de añadir
     $productos = consultar($dbh);
 }
 if(isset($_GET['accion']) && $_GET['accion'] === 'vaciar') {
     vaciarLista($dbh);
-    // Refrescar la lista después de vaciar
     $productos = consultar($dbh);
 }
 if (isset($_GET['accion']) == 'eliminar' && isset($_GET['id'])) {
