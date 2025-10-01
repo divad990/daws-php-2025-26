@@ -10,7 +10,11 @@
     
     <!-- Aquí se mostrará la lista de productos dinámicamente -->
     <div id="lista-productos">
-        <!-- Los productos aparecerán aquí -->
+        <ul>
+            <?php foreach($productos as $producto): ?>
+                <li><?= $producto['producto'] ?> <a href="?accion=eliminar&id=<?= $producto['id'] ?>">Eliminar</a></li>
+            <?php endforeach; ?>
+        </ul>
     </div>
     
     <hr>
