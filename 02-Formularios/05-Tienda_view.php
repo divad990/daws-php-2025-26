@@ -27,7 +27,7 @@
     </style>
 </head>
 <body>
-    <form action="./05-Tienda_view2.php" method="post">
+    <form action="./05-Tienda.php" method="post">
         <table>
             <th>Nombre</th>
             <th>Descripción</th>
@@ -47,7 +47,7 @@
                 <?php endforeach;?>
 
         </table>
-    <button type="submit">Comprar</button>
+    <button type="submit" name="comprar">Comprar</button>
     </form>
 </body>
 </html>
