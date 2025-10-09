@@ -8,14 +8,13 @@
         $estado = comprobarLogin();
         if ($estado == 4) {
             $loginS = comprobarDatos($_POST['user'],$_POST['passwd']);
-            echo $loginS;
         }
 
         if (isset($_POST['eliminar'])){
             session_unset();
         }
         
-        require "./05-login.php";
+        require "./05-login_view.php";
     } else {
         require "./05-mensaje.php";
     }

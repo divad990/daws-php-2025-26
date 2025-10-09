@@ -12,6 +12,6 @@
         session_unset();
     }
 
-    require "./04-view.php";
+    require "./04-sesionLista_view.php";
 
 ?>

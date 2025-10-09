@@ -4,9 +4,9 @@
         setcookie("username", $_GET['username']);
     }
     if (isset($_GET['eliminar'])){
-        setcookie("username");
+        setcookie("username", "", time() - 3600);
     }
 
-    require "./02-view.php";
+    require "./02-guardarYEliminarCookie_view.php";
 
 ?>

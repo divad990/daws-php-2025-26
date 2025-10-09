@@ -5,7 +5,8 @@
     $estado = 0;
 
     if (!isset($_COOKIE['intentos'])){
-        setcookie("intentos");
+        setcookie("intentos", 0);
+        $_COOKIE['intentos'] = 0;
     }
 
     if (!isset($_SESSION['log'])) {
@@ -13,6 +14,7 @@
         $estado = comprobarLogin();
         if ($estado == 4) {
             setcookie('intentos', ($_COOKIE['intentos'] + 1));
+            $_COOKIE['intentos'] = $_COOKIE['intentos'] + 1;
             $loginS = comprobarDatos($_POST['user'],$_POST['passwd']);
         }
 
@@ -21,7 +23,7 @@
             setcookie('intentos', 0);
         }
         
-        require "./06-login.php";
+        require "./06-loginIntentos_view.php";
     }
 
     function comprobarLogin(){

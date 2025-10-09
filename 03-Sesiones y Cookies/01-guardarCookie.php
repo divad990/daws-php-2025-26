@@ -4,6 +4,6 @@
         setcookie("username", $_GET['username']);
     }
 
-    require "./01-view.php";
+    require "./01-guardarCookie_view.php";
 
 ?>
